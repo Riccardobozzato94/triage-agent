@@ -1,0 +1,136 @@
+{
+  "id": "bench-1794868562337",
+  "createdAt": "2026-11-16T22:36:02.337Z",
+  "dataset": "synthetic-tickets-v1",
+  "synthetic": true,
+  "threshold": 0.72,
+  "sampleSize": 120,
+  "metrics": {
+    "accuracyType": 0.925,
+    "accuracyUrgency": 1,
+    "fieldPrecision": 1,
+    "fieldRecall": 1,
+    "autoRouteRate": 0.883,
+    "manualReviewRate": 0.117,
+    "accuracyOnAutoRouted": 1,
+    "auditCoverage": 1,
+    "avgProcessingMs": 0.593,
+    "p95ProcessingMs": 1.03
+  },
+  "confusion": {
+    "ordine": {
+      "ordine": 20
+    },
+    "fatturazione": {
+      "fatturazione": 18,
+      "ordine": 2
+    },
+    "assistenza": {
+      "assistenza": 19,
+      "ordine": 1
+    },
+    "reclamo": {
+      "reclamo": 18,
+      "ordine": 2
+    },
+    "richiesta_informazioni": {
+      "richiesta_informazioni": 18,
+      "ordine": 2
+    },
+    "cambio_dati": {
+      "cambio_dati": 18,
+      "ordine": 2
+    }
+  },
+  "errors": [
+    {
+      "id": "tkt-0008",
+      "expected": "fatturazione/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0010",
+      "expected": "reclamo/alta",
+      "actual": "reclamo/alta",
+      "confidence": 0.99
+    },
+    {
+      "id": "tkt-0019",
+      "expected": "ordine/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0028",
+      "expected": "reclamo/alta",
+      "actual": "reclamo/alta",
+      "confidence": 0.99
+    },
+    {
+      "id": "tkt-0030",
+      "expected": "cambio_dati/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0041",
+      "expected": "richiesta_informazioni/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0046",
+      "expected": "reclamo/alta",
+      "actual": "reclamo/alta",
+      "confidence": 0.99
+    },
+    {
+      "id": "tkt-0052",
+      "expected": "reclamo/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0063",
+      "expected": "assistenza/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0074",
+      "expected": "fatturazione/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0085",
+      "expected": "ordine/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0096",
+      "expected": "cambio_dati/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0107",
+      "expected": "richiesta_informazioni/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    },
+    {
+      "id": "tkt-0118",
+      "expected": "reclamo/media",
+      "actual": "ordine/media",
+      "confidence": 0.05
+    }
+  ],
+  "declaredBaselineHandlingSec": 321,
+  "note": "Risultati misurati su dati sintetici generati da questo repository. Il baseline manuale è un'assunzione dichiarata, non una misura di lavoro umano reale. Nessun risultato va presentato come caso cliente.",
+  "declaration": "Tutti i ticket sono generati da questo repository. Nessun dato reale di clienti. Il baseline manuale è un'assunzione dichiarata, non una misura.",
+  "generatedBy": "projects/triage-agent/scripts/benchmark.ts",
+  "reproducibleWith": "node projects/triage-agent/scripts/benchmark.ts 120"
+}

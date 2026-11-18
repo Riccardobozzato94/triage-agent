@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Flusso del Triage Agent: ticket, normalizzazione, classificazione, soglia, coda umana o auto-approvazione, log">
+  <rect width="1200" height="630" fill="#0a0e17"/>
+  <rect x="60" y="56" width="56" height="3" fill="#d98243"/>
+  <text x="60" y="104" fill="#f3ede4" font-family="system-ui, sans-serif" font-size="34" font-weight="700" letter-spacing="-1">Triage Agent — cosa succede quando il modello non sa</text>
+  <text x="60" y="136" fill="#96a3bd" font-family="ui-monospace, monospace" font-size="14" letter-spacing="2">DATASET SINTETICO · 120 TICKET · 16/11/2026</text>
+
+  <g font-family="system-ui, sans-serif" font-size="15">
+    <rect x="60" y="220" width="150" height="74" rx="9" fill="#141c2b" stroke="#3e5fa8"/>
+    <text x="80" y="252" fill="#f3ede4" font-weight="600">Ticket</text>
+    <text x="80" y="274" fill="#96a3bd" font-size="12">email / ticket</text>
+
+    <rect x="255" y="220" width="160" height="74" rx="9" fill="#141c2b" stroke="#3e5fa8"/>
+    <text x="275" y="252" fill="#f3ede4" font-weight="600">Normalizza</text>
+    <text x="275" y="274" fill="#96a3bd" font-size="12">testo + campi</text>
+
+    <rect x="460" y="220" width="180" height="74" rx="9" fill="#141c2b" stroke="#3e5fa8"/>
+    <text x="480" y="252" fill="#f3ede4" font-weight="600">Classifica</text>
+    <text x="480" y="274" fill="#96a3bd" font-size="12">tipo, urgenza, confidenza</text>
+
+    <rect x="685" y="220" width="150" height="74" rx="9" fill="#141c2b" stroke="#d98243"/>
+    <text x="705" y="252" fill="#f3ede4" font-weight="600">Soglia 0,72</text>
+    <text x="705" y="274" fill="#96a3bd" font-size="12">+ regole di policy</text>
+
+    <rect x="880" y="170" width="220" height="74" rx="9" fill="#eef4e0" stroke="#a6e83c"/>
+    <text x="900" y="202" fill="#141c2b" font-weight="600">Auto-route · 88,3%</text>
+    <text x="900" y="224" fill="#4f5f7a" font-size="12">accuratezza 100%</text>
+
+    <rect x="880" y="292" width="220" height="74" rx="9" fill="#fdf1e6" stroke="#ffb43d"/>
+    <text x="900" y="324" fill="#141c2b" font-weight="600">Coda umana · 11,7%</text>
+    <text x="900" y="346" fill="#4f5f7a" font-size="12">confidenza 0,05 — non indovina</text>
+  </g>
+
+  <g stroke="#96a3bd" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M210 257 L250 257"/>
+    <path d="M415 257 L455 257"/>
+    <path d="M640 257 L680 257"/>
+    <path d="M835 245 L875 207"/>
+    <path d="M835 270 L875 325"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#96a3bd"/>
+    </marker>
+  </defs>
+
+  <rect x="60" y="450" width="1040" height="96" rx="9" fill="#141c2b" stroke="#26314a"/>
+  <text x="84" y="484" fill="#d98243" font-family="ui-monospace, monospace" font-size="14" letter-spacing="2">AUDIT TRAIL</text>
+  <text x="84" y="512" fill="#f3ede4" font-family="system-ui, sans-serif" font-size="16">ingresso · classificazione · approvazione · invio simulato — attore e timestamp per ogni passaggio</text>
+  <text x="84" y="536" fill="#96a3bd" font-family="system-ui, sans-serif" font-size="13">Copertura audit 100% · nessun dato cliente reale · nessun risparmio dichiarato senza misura umana</text>
+</svg>

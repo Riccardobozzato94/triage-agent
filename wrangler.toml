@@ -1,0 +1,27 @@
+name = "triage-agent"
+main = "src/index.ts"
+compatibility_date = "2026-11-13"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[vars]
+CONFIDENCE_THRESHOLD = "0.72"
+
+# Create the database with `wrangler d1 create triage-agent`, then replace the
+# id below with the value printed by the command. This is DEPLOY CONFIGURATION,
+# not site copy; nothing in the application depends on a specific id.
+[[d1_databases]]
+binding = "DB"
+database_name = "triage-agent"
+database_id = "896b3a3c-495a-43f0-b4c9-a7b8fca859c9"
+migrations_dir = "migrations"
+
+# The Worker is mounted under /triage-agent through a service binding from the
+# main site Worker. No zone route: a broad main-site route would win and the
+# duplicate route sent requests to the Netlify origin instead.
+
+# Secrets (never in this file):
+#   wrangler secret put AGENT_TOKEN
+#   wrangler secret put GEMINI_API_KEY          # optional
+#   wrangler secret put WORKERS_AI_ACCOUNT_ID   # optional fallback
+#   wrangler secret put WORKERS_AI_API_TOKEN    # optional fallback
